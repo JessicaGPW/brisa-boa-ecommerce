@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Brisa Boa</title>
+    <meta name="description" content="Finalize sua compra na Brisa Boa. Preencha seus dados e escolha a forma de pagamento.">
+    <link rel="icon" href="../images/favicon_redesenhado.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo_redesenhado_folha.png" alt="Brisa Boa Logo">
+                <span class="logo-text">BRISA BOA</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="camisetas.html">Camisetas</a></li>
+                    <li><a href="canecas.html">Canecas</a></li>
+                    <li><a href="bones.html">Bonés</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <a href="carrinho.html" class="header-icon cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="conta.html" class="header-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <div class="mobile-menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Finalizar Compra</h1>
+            <p>Preencha seus dados e escolha a forma de pagamento.</p>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-container">
+                <!-- Checkout Form -->
+                <div class="checkout-form-container">
+                    <form class="checkout-form">
+                        <div class="form-section">
+                            <h3>Dados Pessoais</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nome Completo</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefone</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" id="cpf" name="cpf" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Endereço de Entrega</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cep">CEP</label>
+                                    <input type="text" id="cep" name="cep" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-secondary" id="buscar-cep">Buscar CEP</button>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="street">Rua</label>
+                                    <input type="text" id="street" name="street" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="number">Número</label>
+                                    <input type="text" id="number" name="number" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="complement">Complemento</label>
+                                    <input type="text" id="complement" name="complement">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="neighborhood">Bairro</label>
+                                    <input type="text" id="neighborhood" name="neighborhood" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">Cidade</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">Estado</label>
+                                    <select id="state" name="state" required>
+                                        <option value="">Selecione</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Opções de Entrega</h3>
+                            <div class="shipping-options">
+                                <div class="shipping-option">
+                                    <label>
+                                        <input type="radio" name="shipping" value="15.90" checked>
+                                        <div class="shipping-option-details">
+                                            <span class="shipping-name">PAC</span>
+                                            <span class="shipping-price">R$ 15,90</span>
+                                            <span class="shipping-days">5-8 dias úteis</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="shipping-option">
+                                    <label>
+                                        <input type="radio" name="shipping" value="25.50">
+                                        <div class="shipping-option-details">
+                                            <span class="shipping-name">SEDEX</span>
+                                            <span class="shipping-price">R$ 25,50</span>
+                                            <span class="shipping-days">1-3 dias úteis</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Forma de Pagamento</h3>
+                            <div class="payment-methods-tabs">
+                                <div class="payment-tabs">
+                                    <button type="button" class="payment-tab active" data-method="credit-card">Cartão de Crédito</button>
+                                    <button type="button" class="payment-tab" data-method="boleto">Boleto</button>
+                                    <button type="button" class="payment-tab" data-method="pix">PIX</button>
+                                </div>
+                                
+                                <div class="payment-content active" id="credit-card">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-number">Número do Cartão</label>
+                                            <input type="text" id="card-number" name="card-number">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-name">Nome no Cartão</label>
+                                            <input type="text" id="card-name" name="card-name">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-expiry">Validade (MM/AA)</label>
+                                            <input type="text" id="card-expiry" name="card-expiry">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card-cvv">CVV</label>
+                                            <input type="text" id="card-cvv" name="card-cvv">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-installments">Parcelas</label>
+                                            <select id="card-installments" name="card-installments">
+                                                <option value="1">1x sem juros</option>
+                                                <option value="2">2x sem juros</option>
+                                                <option value="3">3x sem juros</option>
+                                                <option value="4">4x com juros</option>
+                                                <option value="5">5x com juros</option>
+                                                <option value="6">6x com juros</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-content" id="boleto">
+                                    <p>O boleto será gerado após a finalização do pedido e poderá ser pago em qualquer agência bancária ou internet banking.</p>
+                                    <p>O prazo de processamento é de até 3 dias úteis após o pagamento.</p>
+                                </div>
+                                
+                                <div class="payment-content" id="pix">
+                                    <p>O QR Code do PIX será gerado após a finalização do pedido.</p>
+                                    <p>O pagamento é processado instantaneamente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn">Finalizar Pedido</button>
+                            <a href="carrinho.html" class="back-to-cart">Voltar para o Carrinho</a>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Resumo do Pedido</h3>
+                    
+                    <div class="order-items">
+                        <!-- Os itens do pedido serão renderizados via JavaScript -->
+                    </div>
+                    
+                    <div class="order-totals">
+                        <div class="order-total-row">
+                            <span>Subtotal</span>
+                            <span class="order-subtotal-value">R$ 0.00</span>
+                        </div>
+                        
+                        <div class="order-total-row">
+                            <span>Frete</span>
+                            <span class="order-shipping-value">R$ 15.90</span>
+                        </div>
+                        
+                        <div class="order-total-row">
+                            <span>Desconto</span>
+                            <span class="order-discount-value">R$ 0.00</span>
+                        </div>
+                        
+                        <div class="order-total-row total">
+                            <span>Total</span>
+                            <span class="order-total-value">R$ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="../images/logo_redesenhado_folha.png" alt="Brisa Boa Logo">
+                        <span class="footer-logo-text">BRISA BOA</span>
+                    </div>
+                    <p>Camisetas, canecas e bonés irreverentes e de alta qualidade para quem curte a vibe da cannabis.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Categorias</h3>
+                    <ul>
+                        <li><a href="camisetas.html">Camisetas</a></li>
+                        <li><a href="canecas.html">Canecas</a></li>
+                        <li><a href="bones.html">Bonés</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contato</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </span>
+                            São Paulo, SP - Brasil
+                        </li>
+                        <li>
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </span>
+                            contato@brisaboa.com.br
+                        </li>
+                        <li>
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </span>
+                            (11) 99999-9999
+                        </li>
+                    </ul>
+                    
+                    <h3 class="footer-title">Formas de Pagamento</h3>
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <img src="../images/payment-visa.png" alt="Visa">
+                        </div>
+                        <div class="payment-method">
+                            <img src="../images/payment-mastercard.png" alt="Mastercard">
+                        </div>
+                        <div class="payment-method">
+                            <img src="../images/payment-pix.png" alt="Pix">
+                        </div>
+                        <div class="payment-method">
+                            <img src="../images/payment-boleto.png" alt="Boleto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Brisa Boa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Inicializar página de checkout quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Renderizar itens do pedido
+            renderOrderItems();
+            
+            // Inicializar tabs de pagamento
+            initPaymentTabs();
+            
+            // Inicializar busca de CEP
+            initCepSearch();
+            
+            // Inicializar formulário de checkout
+            initCheckoutForm();
+        });
+        
+        // Função para renderizar itens do pedido
+        function renderOrderItems() {
+            const orderItemsContainer = document.querySelector('.order-items');
+            if (!orderItemsContainer) return;
+            
+            // Obter carrinho do localStorage
+            const cart = JSON.parse(localStorage.getItem('brisaBoaCart')) || [];
+            
+            if (cart.length === 0) {
+                orderItemsContainer.innerHTML = '<p>Seu carrinho está vazio</p>';
+                return;
+            }
+            
+            // Renderizar cada item
+            let orderHTML = '';
+            let subtotal = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                
+                orderHTML += `
+                    <div class="order-item">
+                        <div class="order-item-details">
+                            <h4>${item.name}</h4>
+                            <p>${item.variation ? item.variation : ''}</p>
+                            <p>Quantidade: ${item.quantity}</p>
+                        </div>
+                        <div class="order-item-price">
+                            <p>R$ ${itemTotal.toFixed(2)}</p>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            orderItemsContainer.innerHTML = orderHTML;
+            
+            // Atualizar subtotal
+            const subtotalElement = document.querySelector('.order-subtotal-value');
+            if (subtotalElement) {
+                subtotalElement.textContent = `R$ ${subtotal.toFixed(2)}`;
+            }
+            
+            // Atualizar total
+            updateOrderTotal();
+        }
+        
+        // Função para atualizar o total do pedido
+        function updateOrderTotal() {
+            const subtotalElement = document.querySelector('.order-subtotal-value');
+            const shippingElement = document.querySelector('.order-shipping-value');
+            const discountElement = document.querySelector('.order-discount-value');
+            const totalElement = document.querySelector('.order-total-value');
+            
+            if (!subtotalElement || !totalElement) return;
+            
+            // Obter valores
+            const subtotal = parseFloat(subtotalElement.textContent.replace('R$', '').trim());
+            const shipping = shippingElement ? parseFloat(shippingElement.textContent.replace('R$', '').trim()) || 0 : 0;
+            const discount = discountElement ? parseFloat(discountElement.textContent.replace('R$', '').trim()) || 0 : 0;
+            
+            // Calcular total
+            const total = subtotal + shipping - discount;
+            
+            // Atualizar elemento
+            totalElement.textContent = `R$ ${total.toFixed(2)}`;
+        }
+        
+        // Função para inicializar tabs de pagamento
+        function initPaymentTabs() {
+            const paymentTabs = document.querySelectorAll('.payment-tab');
+            const paymentContents = document.querySelectorAll('.payment-content');
+            
+            paymentTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remover classe active de todas as tabs
+                    paymentTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Adicionar classe active na tab clicada
+                    this.classList.add('active');
+                    
+                    // Esconder todos os conteúdos
+                    paymentContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Mostrar conteúdo correspondente
+                    const method = this.dataset.method;
+                    document.getElementById(method).classList.add('active');
+                });
+            });
+        }
+        
+        // Função para inicializar busca de CEP
+        function initCepSearch() {
+            const cepButton = document.getElementById('buscar-cep');
+            if (!cepButton) return;
+            
+            cepButton.addEventListener('click', function() {
+                const cep = document.getElementById('cep').value.replace(/\D/g, '');
+                
+                if (cep.length !== 8) {
+                    alert('Por favor, insira um CEP válido.');
+                    return;
+                }
+                
+                // Simular busca de CEP (em produção, isso seria uma chamada AJAX)
+                setTimeout(() => {
+                    document.getElementById('street').value = 'Rua Exemplo';
+                    document.getElementById('neighborhood').value = 'Bairro Exemplo';
+                    document.getElementById('city').value = 'São Paulo';
+                    document.getElementById('state').value = 'SP';
+                    
+                    // Focar no campo número
+                    document.getElementById('number').focus();
+                }, 1000);
+            });
+        }
+        
+        // Função para inicializar formulário de checkout
+        function initCheckoutForm() {
+            const checkoutForm = document.querySelector('.checkout-form');
+            if (!checkoutForm) return;
+            
+            checkoutForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simular processamento do pedido
+                alert('Pedido finalizado com sucesso! Você será redirecionado para a página de confirmação.');
+                
+                // Limpar carrinho
+                localStorage.removeItem('brisaBoaCart');
+                
+                // Redirecionar para página de confirmação (em produção)
+                // window.location.href = 'confirmacao.html';
+            });
+        }
+    </script>
+</body>
+</html>
